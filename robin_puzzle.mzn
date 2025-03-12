@@ -41,4 +41,4 @@ constraint v[1,4] - j[2] - v[5,4] - v[6,4] = -180;
 constraint v[1,5] + v[2,5] + v[3,5] + v[4,5] - v[5,5] - v[6,5] = 71;
 constraint v[1,6] * v[2,6] + v[3,6] + v[4,6] - v[5,6] - v[6,6] = 389;
 
-solve satisfy;
+solve :: int_search(v, dom_w_deg, indomain_split) satisfy;
